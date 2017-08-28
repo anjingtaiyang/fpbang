@@ -26,7 +26,7 @@
 		</div>
 		<div class="dis_flex">
 			<div class="invoiceItem" v-for='item in arr'>
-		      <collectinvoice :dd=item></collectinvoice>
+		      <collectinvoice :msg=item></collectinvoice>
 		    </div>
 	    </div>
 	</div>
@@ -39,7 +39,8 @@
 		data(){
 			return{
 				isActive:'main',
-				arr:[1,2,3,4]
+				arr:['aa','bb','cc','dd'],
+				msg:''
 			}
 		},
 		components:{
@@ -49,9 +50,13 @@
 </script>
 
 <style>
-	.dis_flex{
+	@mixin display_flex($direction){
 		display: flex;
-		flex-direction: row;
+		flex-direction: $direction;
+	}
+	
+	.dis_flex{
+		@include display_flex(row)
 	}
 	.invoiceItem{
 		flex: 1;
