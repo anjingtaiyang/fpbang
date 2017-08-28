@@ -1,0 +1,81 @@
+html {
+    user-select: none;
+    -webkit-font-smoothing: antialiased;
+    touch-action: manipulation;
+    text-size-adjust: none;
+    font-size: 26.67vw;
+}
+body {
+    font-size: 0.12rem;
+    min-width: 320px;
+    margin: 0px auto;
+    font-family: '微软雅黑', 'helvetica neue',tahoma,'hiragino sans gb',stheiti,'wenquanyi micro hei',\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,sans-serif;
+    line-height: 1.5;
+}
+body,
+html {
+    height: 100%;
+}
+body,
+button,
+dd,
+dl,
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+}
+ol,
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #333;
+    outline: none;
+}
+a,
+img {
+    -webkit-touch-callout: none;
+
+}
+button,
+input,
+select,
+textarea {
+    outline: 0;
+    border: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    font-weight: 400;
+}
+textarea {
+    resize: none;
+}
+select {
+    background-color: transparent;
+    appearance: none;
+}
+input[type=button],
+input[type=reset],
+input[type=submit] {
+    appearance: button;
+}
+input:-webkit-autofill {
+    box-shadow: 0 0 0 100px #fff inset;
+}
+*,
+:after,
+:before {
+    box-sizing: inherit;
+    -webkit-tap-highlight-color: transparent;
+}
+
+
