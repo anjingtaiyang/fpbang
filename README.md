@@ -1,6 +1,6 @@
 # fapiaobang
 
-> A Vue.js project
+> A Vue.js+mintui project
 
 ## Build Setup
 
