@@ -1,0 +1,48 @@
+html,body{
+    height: 100%;
+    background: #F8F8F9;
+}
+@mixin display_flex($direction){
+    display: flex;
+    flex-direction: $direction;
+}
+@mixin heightauto(){
+    height: auto;
+    overflow: hidden;
+}
+@mixin fonts($size,$color){
+    font-size: $size;
+    color: $color;
+}
+.fl{float: left;}
+.fr{float: right;}
+$color28292F:#28292F;
+$colorFF8F00:#FF8F00;
+$color939497:#939497;
+$color0079CC:#0079CC;
+$ft24:0.24rem;
+$ft26:0.26rem;
+$ft30:0.30rem;
+$ft32:0.32rem;
+$ft34:0.34rem;
+$ft40:0.40rem;
+.dis_flex{
+    @include display_flex(row)
+}
+.moduletitle{
+    height: 0.88rem;
+    line-height: 0.88rem;
+    text-align: center;
+    border-bottom: 1px solid #EBECED;
+    img{
+        width: 0.4rem;
+        height: auto;
+        vertical-align: top;
+        margin: 0.24rem 0.3rem;
+    }
+    .titlename{
+        flex: 1;
+        @include fonts(0.34rem,#28292F);
+    }
+    
+}

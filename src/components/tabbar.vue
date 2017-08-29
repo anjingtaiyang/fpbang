@@ -2,11 +2,15 @@
 	<div>
 		<router-view></router-view>
 		<mt-tabbar v-model="selected">
-		  <mt-tab-item id="invoiceWallet" href="#/tabbar/aa">
+		  <mt-tab-item id="invoiceWallet" href="#/tabbar/bb">
 		    <img slot="icon" src="../assets/logo.png">
 		    票夹
 		  </mt-tab-item>
-		  <mt-tab-item id="collectInvoice"  href="#/tabbar/bb">
+		  <mt-tab-item id="makeoutInvoice" href="#/tabbar/bb">
+		    <img slot="icon" src="../assets/logo.png">
+		    开票
+		  </mt-tab-item>
+		  <mt-tab-item id="collectInvoice"  href="#/tabbar/aa">
 		    <img slot="icon" src="../assets/logo.png">
 		    收票
 		  </mt-tab-item>

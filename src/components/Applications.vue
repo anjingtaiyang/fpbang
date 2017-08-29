@@ -1,20 +1,19 @@
 <template>
 	<div>
 		<img src="../assets/logo.png"/>
-		<div v-text="msg"></div>
+		<div v-text='menu'></div>
 	</div>
-</template
+</template>
 
 <script>
 	export default{
-		name:'Collectinvoice',
+		name:'applications',
+		props:['menu'],
 		data(){
-			return{
-				msg:'asasssss'
+			return {
+				ddbb:''
 			}
 		}
-
-		
 	}
 </script>
 
