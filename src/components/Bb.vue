@@ -33,6 +33,11 @@
 				</li>
 			</ul>
 		</div>
+		<div class="selecttax dis_flex">
+			<div>是否含税</div>
+			<mt-radio v-model="value" :options="['是', '否']">
+			</mt-radio>
+		</div>
 		<div class="customerInformation">
 			<div class="customer">
 				<div>商品信息</div>
@@ -64,6 +69,7 @@
 	</div>
 </template>
 <script>
+	import { Radio } from 'mint-ui';
 	export default{
 		name:'',
 		data(){
@@ -80,10 +86,23 @@
 				],
 			}
 		},
+		components:{
+			Radio
+		}
 	}
 </script>
 <style>
 	@import '../styles/common.scss';
+	.mint-radiolist{
+		width: 4rem;
+		@include display_flex(row);
+		.mint-radiolist-title{
+			display:none
+		}
+		.mint-radiolist-label{
+			border: none;
+		}
+	}
 	.next{
 		width: 0.15rem;
 		height: 0.26rem;
