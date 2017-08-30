@@ -1,6 +1,5 @@
 <template>
 	<div class="invoiceNumber">
-		<!--<moduletitle :title='title'></moduletitle>-->
 		<div class="moduletitle dis_flex">
 			<div>
 				<img src="../assets/logo.png"/>

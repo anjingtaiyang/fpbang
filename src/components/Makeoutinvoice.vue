@@ -23,7 +23,7 @@
 						<div class="delete"><img src="../assets/logo.png"/></div>
 					</div>
 				</li>
-				<li v-for="item in customer2" style="height: 1.2rem;">
+				<li v-for="item in customer2" style="height: 1.2rem;display:none">
 					<span><img class="require" src="../assets/logo.png"/></span>
 					<div style="height: 1.2rem;">
 						<label for="">{{item.label}}</label>
@@ -34,12 +34,14 @@
 			</ul>
 		</div>
 		<div class="selecttax dis_flex">
-			<div>是否含税</div>
-			<mt-radio v-model="value" :options="['是', '否']">
-			</mt-radio>
+			<div>
+				<div class="label">是否含税</div>
+				<mt-radio v-model="value" :options="['含税', '不含税']">
+				</mt-radio>
+			</div>
 		</div>
-		<div class="customerInformation">
-			<div class="customer">
+		<div class="projectInformation">
+			<div class="project">
 				<div>商品信息</div>
 				<div>
 					<span class="open">展开</span>
@@ -47,60 +49,83 @@
 					<span class="del">删除</span>
 				</div>
 			</div>
-			<ul class="information">
-				<li v-for="item in customer1">
+			<ul class="information" v-for="item in product">
+				<li>
 					<span><img class="require" src="../assets/logo.png"/></span>
 					<div>
-						<label for="">{{item.label}}</label>
-						<input type="text" :placeholder=item.placeholder name="" id="" value="" />
+						<label for="">商品名称</label>
+						<input type="text" placeholder="请输入商品名称" name="" id=""  :value=item.name />
 						<div class="delete"><img src="../assets/logo.png"/></div>
 					</div>
 				</li>
-				<li v-for="item in customer2">
+				<li>
 					<span><img class="require" src="../assets/logo.png"/></span>
 					<div>
-						<label for="">{{item.label}}</label>
-						<input type="text" :placeholder=item.placeholder name="" id="" value="" />
+						<label for="">商品金额</label>
+						<input type="text" placeholder="请输入商品金额" name="" id="" :value=item.money />
 						<div class="delete"><img src="../assets/logo.png"/></div>
 					</div>
 				</li>
 			</ul>
 		</div>
+		<div class="addProject">
+			添加商品
+		</div>
+		<div class="makeInvoice">
+			<div class="priceTax">价税合计 <span>¥100.00</span></div>
+			<div class="preview">预览</div>
+			<div class="make">立即开票</div>
+		</div>
 	</div>
 </template>
 <script>
-	import { Radio } from 'mint-ui';
 	export default{
-		name:'',
 		data(){
 			return{
 				customer1:[
 				{label:'客户名称',placeholder:'请输入客户名称'},
 				{label:'购方税号',placeholder:'请输入购方税号'},
-				{label:'客户名称',placeholder:'请输入客户名称'},
-				{label:'购方税号',placeholder:'请输入购方税号'}
+				{label:'手机号码',placeholder:'请输入手机好吗'}
 				],
 				customer2:[
 				{label:'地址、电话',placeholder:'请输入地址电话'},
 				{label:'开户行及账号',placeholder:'请输入开户行及账号'}
 				],
+				product:[
+					{name:'办公文具',money:'199.99'}
+				],
+				value:'含税'
 			}
-		},
-		components:{
-			Radio
 		}
 	}
 </script>
-<style>
+<style lang="scss">
 	@import '../styles/common.scss';
+	.mint-cell-wrapper,.mint-cell:last-child{
+		background-image:none
+	}
 	.mint-radiolist{
-		width: 4rem;
-		@include display_flex(row);
+		display: flex;
+		flex-direction: row;
+		position: relative;
 		.mint-radiolist-title{
-			display:none
+			display: none;
 		}
-		.mint-radiolist-label{
-			border: none;
+	}
+	.mint-radio-label{
+		font-size: 0.28rem;
+	}
+	.selecttax{
+		height: 1rem;
+		background: white;
+		padding: 0 0.3rem;
+		@include fonts($ft30,$color28292F);
+		margin:0.1rem 0;
+		.label{line-height: 1rem;margin-right:0.1rem}
+		>div{
+			width: 100%;
+			@include display_flex(row);
+			border-bottom: 1px solid #E9EDF8;
 		}
 	}
 	.next{
@@ -135,9 +160,9 @@
 			}
 		}
 	}
-	.customerInformation{
+	.customerInformation,.projectInformation{
 		background: white;
-		.customer{
+		.customer,.project{
 			height: 1.2rem;
 			line-height: 1.2rem;
 			padding: 0 0.3rem;
@@ -160,6 +185,7 @@
 				}
 				.fg{
 					margin: 0 0;
+					color: #535971;
 				}
 			}
 		}
@@ -217,11 +243,43 @@
 				}
 			}
 		}
-		.open{
+	}
+	.addProject{
+		width: 100%;
+		height: 0.6rem;
+		background: white;
+		@include fonts($ft32,$color0079CC);
+		text-align: center;	
+		line-height: 0.6rem;
+		margin: 0.1rem 0 0.26rem;	
+	}
+	.makeInvoice{
+		width:100%;
+		background: white;
+		height: 1rem;
+		line-height: 1rem;
+		position: absolute;
+		bottom: 0;
+		@include fonts($ft28,#495060);
+		@include display_flex(row);
+		text-align:center;
+		.priceTax{
+			flex: 1;
+			border-right: 0.01rem solid #DDDEE1;
+			span{
+				color: #0079CC;
+				font-weight:600;
+			}
+		}
+		.preview{
+			width: 2rem;
+			@include fonts($ft30,$color0079CC);
 			
 		}
-		
-		
+		.make{
+			width: 2rem;
+			@include fonts($ft32,#ffffff);
+			background: #0079CC;
+		}
 	}
-	
 </style>
