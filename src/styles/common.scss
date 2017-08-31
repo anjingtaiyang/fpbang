@@ -14,6 +14,23 @@ html,body{
     font-size: $size;
     color: $color;
 }
+@mixin positoncenter{
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+@mixin _header {
+    flex-grow:0 ;
+    flex-shrink: 0;
+}
+@mixin _section {
+    flex-grow: 1;
+    flex-shrink: 1;
+    overflow: scroll;
+}
 .fl{float: left;}
 .fr{float: right;}
 $color28292F:#28292F;
@@ -28,6 +45,9 @@ $ft32:0.32rem;
 $ft34:0.34rem;
 $ft40:0.40rem;
 .mt10{margin-bottom: 0.1rem;}
+input,textarea{
+    caret-color: #0079CC;
+}
 .dis_flex{
     @include display_flex(row)
 }

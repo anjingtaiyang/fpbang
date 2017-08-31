@@ -1,4 +1,5 @@
 <template>
+<div>
 	<div class="makeoutinvoice">
 		<div class="moduletitle dis_flex">
 			<div></div>
@@ -71,12 +72,13 @@
 		<div class="addProject">
 			添加商品
 		</div>
-		<div class="makeInvoice">
-			<div class="priceTax">价税合计 <span>¥100.00</span></div>
-			<div class="preview">预览</div>
-			<div class="make">立即开票</div>
-		</div>
 	</div>
+	<div class="makeInvoice">
+		<div class="priceTax">价税合计 <span>¥100.00</span></div>
+		<div class="preview">预览</div>
+		<div class="make">立即开票</div>
+	</div>
+</div>
 </template>
 <script>
 	export default{
@@ -102,7 +104,11 @@
 <style lang="scss">
 	@import '../styles/common.scss';
 	.mint-cell-wrapper,.mint-cell:last-child{
-		background-image:none
+		background-image:none;
+		height: 1rem;
+	}
+	.mint-cell:last-child{
+		height: 0.98rem;
 	}
 	.mint-radiolist{
 		display: flex;
@@ -141,6 +147,7 @@
 		top: 0;
 		bottom: 57px;
 		width: 100%;
+		padding-bottom: 1rem;
 		overflow: scroll;
 		.moduletitle{
 			background: white;
@@ -259,7 +266,7 @@
 		height: 1rem;
 		line-height: 1rem;
 		position: absolute;
-		bottom: 0;
+		bottom: 57px;
 		@include fonts($ft28,#495060);
 		@include display_flex(row);
 		text-align:center;

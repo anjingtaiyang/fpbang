@@ -6,6 +6,8 @@ import router from './router'
 import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
 import './assets/js/rem'
+import './assets/js/iscroll'
+import './assets/js/jquery-2.1.4'
 Vue.config.productionTip = false
 Vue.use(MintUI)
 
