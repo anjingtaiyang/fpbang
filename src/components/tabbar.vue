@@ -20,7 +20,7 @@
 					{id:'makeoutInvoice',tabbarname:'开票',href:'#/tabbar/makeoutinvoice'},
 					{id:'workBench',tabbarname:'工作台',href:'#/tabbar/work'},
 					{id:"message",tabbarname:'消息',href:'#/tabbar/makeoutinvoice'},
-					{id:"mine",tabbarname:'我的',href:'#/'}
+					{id:"mine",tabbarname:'我的',href:'#/waitforinvoice'}
 		    		],
 		    	}
 		},

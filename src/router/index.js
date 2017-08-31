@@ -4,6 +4,7 @@ import Hello from '@/components/Hello'
 import Tabbar from '@/components/Tabbar'
 import Work from '@/components/Work'
 import Makeoutinvoice from '@/components/Makeoutinvoice'
+import Waitforinvoice from '@/components/Waitforinvoice'
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -24,6 +25,11 @@ export default new Router({
         {path:'makeoutinvoice',component:Makeoutinvoice}
 	   ],
 	   redirect:'/tabbar/makeoutinvoice' //进入news就重定向
-    }
+    },
+    {
+      path: '/waitforinvoice',
+      name:'waitforinvoice',
+	  component:Waitforinvoice 
+    },
   ]
 })
