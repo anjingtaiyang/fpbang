@@ -5,6 +5,7 @@ import Tabbar from '@/components/Tabbar'
 import Work from '@/components/Work'
 import Makeoutinvoice from '@/components/Makeoutinvoice'
 import Waitforinvoice from '@/components/Waitforinvoice'
+import Invoicedetail from '@/components/Invoicedetail'
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -30,6 +31,11 @@ export default new Router({
       path: '/waitforinvoice',
       name:'waitforinvoice',
 	  component:Waitforinvoice 
+    },
+    {
+      path: '/invoicedetail',
+      name:'invoicedetail',
+	  component:Invoicedetail 
     },
   ]
 })

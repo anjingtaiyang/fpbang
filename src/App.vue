@@ -11,6 +11,7 @@ export default {
 </script>
 
 <style lang="scss">
+@import './styles/previewChromeStyle.scss';
 	@import './styles/reset.scss';
 	@import './styles/common.scss';
 	*{margin: 0;padding: 0;}

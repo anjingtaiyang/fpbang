@@ -32,91 +32,6 @@
 						<img src="../assets/logo.png"/>
 					</div>
 				</li>
-				<li>
-					<div class="invoice_info">
-						<div class="companyname">百望股份有限公司百望股份有限公司百望股份有限公司百望股份有限公司百望股份有限公司百望股份有限公司</div>
-						<div class="dis_flex">
-							<div class="money">
-								¥100.00
-							</div>
-							<div class="invoicetype">
-								<span>电子发票</span>
-								<span class="time">2017/08/08 12:30</span>
-							</div>
-						</div>
-					</div>
-					<div class="imgbox">
-						<img src="../assets/logo.png"/>
-					</div>
-				</li>
-				<li>
-					<div class="invoice_info">
-						<div class="companyname">百望股份有限公司百望股份有限公司百望股份有限公司百望股份有限公司百望股份有限公司百望股份有限公司</div>
-						<div class="dis_flex">
-							<div class="money">
-								¥100.00
-							</div>
-							<div class="invoicetype">
-								<span>电子发票</span>
-								<span class="time">2017/08/08 12:30</span>
-							</div>
-						</div>
-					</div>
-					<div class="imgbox">
-						<img src="../assets/logo.png"/>
-					</div>
-				</li>
-				<li>
-					<div class="invoice_info">
-						<div class="companyname">百望股份有限公司百望股份有限公司百望股份有限公司百望股份有限公司百望股份有限公司百望股份有限公司</div>
-						<div class="dis_flex">
-							<div class="money">
-								¥100.00
-							</div>
-							<div class="invoicetype">
-								<span>电子发票</span>
-								<span class="time">2017/08/08 12:30</span>
-							</div>
-						</div>
-					</div>
-					<div class="imgbox">
-						<img src="../assets/logo.png"/>
-					</div>
-				</li>
-				<li>
-					<div class="invoice_info">
-						<div class="companyname">百望股份有限公司百望股份有限公司百望股份有限公司百望股份有限公司百望股份有限公司百望股份有限公司</div>
-						<div class="dis_flex">
-							<div class="money">
-								¥100.00
-							</div>
-							<div class="invoicetype">
-								<span>电子发票</span>
-								<span class="time">2017/08/08 12:30</span>
-							</div>
-						</div>
-					</div>
-					<div class="imgbox">
-						<img src="../assets/logo.png"/>
-					</div>
-				</li>
-				<li>
-					<div class="invoice_info">
-						<div class="companyname">百望股份有限公司百望股份有限公司百望股份有限公司百望股份有限公司百望股份有限公司百望股份有限公司</div>
-						<div class="dis_flex">
-							<div class="money">
-								¥100.00
-							</div>
-							<div class="invoicetype">
-								<span>电子发票</span>
-								<span class="time">2017/08/08 12:30</span>
-							</div>
-						</div>
-					</div>
-					<div class="imgbox">
-						<img src="../assets/logo.png"/>
-					</div>
-				</li>
 			</ul>
 		</div>
 	</div>
@@ -142,12 +57,23 @@
 		    }
 		},
 		mounted(){
-			var scroll = new iScroll("scroll", {
-					hScrollbar: false,
-					vScrollbar: false
-			});
-			$('#scroll').height($(window).height()-$('.moduletitle').height()-$('.box88').height())
-		}
+//			var scroll = new iScroll("scroll", {
+//				    hScroll:false,
+//					hScrollbar: false,
+//					vScrollbar: false
+//			});
+//			$('#scroll').height('400');
+//			scroll.refresh()
+	},
+//		loadTop() {
+//			alert('1')
+//		  this.$refs.loadmore.onTopLoaded();
+//		},
+//		loadBottom() {
+//			alert()
+//		  this.allLoaded = true;
+//		  this.$refs.loadmore.onBottomLoaded();
+//		}
 	}
 	
 </script>
@@ -162,6 +88,10 @@
 		div{
 			width: 1rem;
 		}
+	}
+	#scroll {
+		height: 4rem;
+		overflow: hidden;
 	}
 	.box88{
 		height: 0.88rem;
@@ -205,7 +135,7 @@
 		height: auto;
 		padding: 0 0.3rem;
 		box-sizing: border-box;
-		/*overflow: hidden;*/
+		overflow: hidden;
 		li{
 			width: 100%;
 			height: auto;

@@ -77,6 +77,7 @@
 		<div class="priceTax">价税合计 <span>¥100.00</span></div>
 		<div class="preview">预览</div>
 		<div class="make">立即开票</div>
+		<a href="./static/new_file.html">点击</a>
 	</div>
 </div>
 </template>
@@ -98,6 +99,8 @@
 				],
 				value:'含税'
 			}
+		},
+		mounted(){
 		}
 	}
 </script>
